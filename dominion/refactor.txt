@@ -1,0 +1,8 @@
+My strategy for extracting the card effect functions generally went along this sequence:
+
+1. Cut the text inside the switch case for the given card
+2. In the place of the body of the switch case write something like "return ambassadorEffect();"
+3. Up above cardEffect, stub out the function i.e. ambassadorEffect() and paste the body of the switch case inside of it.
+4. Based on the build errors, add parameters to the effect function. Pass those parameters at the call site.
+
+One of the weirder aspects of all this is that all the variables in cardEffect are declared at the top-- this means that cutting out the body of a switch case can render the variable unnecessary. I tried to clean these kinds of variable declarations up within reason.
