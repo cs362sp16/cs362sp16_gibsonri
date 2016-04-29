@@ -63,11 +63,11 @@ struct gameState {
   int numActions; /* Starts at 1 each turn */
   int coins; /* Use as you see fit! */
   int numBuys; /* Starts at 1 each turn */
-  int hand[MAX_PLAYERS][MAX_HAND];
+  enum CARD hand[MAX_PLAYERS][MAX_HAND];
   int handCount[MAX_PLAYERS];
-  int deck[MAX_PLAYERS][MAX_DECK];
+  enum CARD deck[MAX_PLAYERS][MAX_DECK];
   int deckCount[MAX_PLAYERS];
-  int discard[MAX_PLAYERS][MAX_DECK];
+  enum CARD discard[MAX_PLAYERS][MAX_DECK];
   int discardCount[MAX_PLAYERS];
   int playedCards[MAX_DECK];
   int playedCardCount;
