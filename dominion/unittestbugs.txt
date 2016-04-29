@@ -1,2 +1,5 @@
 unittest2.c exposed a bug where score is not properly counted.
 One of the loops that calculates the score was using the count for the wrong list of cards.
+
+cardtest3.c exposed a bug-- running the debugger and checking game state before and after executing
+this function was a bit of a clumsy exercise but the implementation of the sea hag card is definitely buggy.

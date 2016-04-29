@@ -3,7 +3,15 @@
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" assignedExecutableTargets="true" buildAllGenerated="true">
     <generated>
       <config projectName="dominion" targetName="player" />
+      <config projectName="dominion" targetName="unittest3" />
+      <config projectName="dominion" targetName="unittest4" />
+      <config projectName="dominion" targetName="cardtest4" />
+      <config projectName="dominion" targetName="unittest1" />
       <config projectName="playdom.c" targetName="playdom" />
+      <config projectName="dominion" targetName="cardtest3" />
+      <config projectName="dominion" targetName="unittest2" />
+      <config projectName="dominion" targetName="cardtest2" />
+      <config projectName="dominion" targetName="cardtest1" />
       <config projectName="dominion" targetName="playdom" />
     </generated>
   </component>
@@ -33,12 +41,58 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="dominion.c" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dominion.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dominion.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-960">
-              <caret line="624" column="17" selection-start-line="624" selection-start-column="17" selection-end-line="624" selection-end-column="17" />
+            <state relative-caret-position="175">
+              <caret line="1203" column="0" selection-start-line="1203" selection-start-column="0" selection-end-line="1203" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="unittestbugs.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/unittestbugs.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="unittest3.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/unittest3.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-450">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="unittest4.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/unittest4.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cardtest3.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cardtest3.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="227">
+              <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -46,7 +100,7 @@
       <file leaf-file-name="dominion.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dominion.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-807">
+            <state relative-caret-position="450">
               <caret line="30" column="8" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="8" />
               <folding />
             </state>
@@ -103,6 +157,7 @@
         <option value="$PROJECT_DIR$/playdom.c" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/dominion.c" />
+        <option value="$PROJECT_DIR$/unittestbugs.txt" />
       </list>
     </option>
   </component>
@@ -221,7 +276,7 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="FullScreen" value="true" />
   </component>
-  <component name="RunManager" selected="Application.playdom">
+  <component name="RunManager" selected="Application.cardtest3">
     <configuration default="true" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" TEST_MODE="SUITE_TEST">
       <envs />
       <method />
@@ -395,10 +450,50 @@
       <envs />
       <method />
     </configuration>
-    <list size="3">
+    <configuration default="false" name="cardtest1" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="dominion" TARGET_NAME="cardtest1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="dominion" RUN_TARGET_NAME="cardtest1">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="cardtest2" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="dominion" TARGET_NAME="cardtest2" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="dominion" RUN_TARGET_NAME="cardtest2">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="cardtest3" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="dominion" TARGET_NAME="cardtest3" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="dominion" RUN_TARGET_NAME="cardtest3">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="cardtest4" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="dominion" TARGET_NAME="cardtest4" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="dominion" RUN_TARGET_NAME="cardtest4">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="unittest1" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="dominion" TARGET_NAME="unittest1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="dominion" RUN_TARGET_NAME="unittest1">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="unittest2" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="dominion" TARGET_NAME="unittest2" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="dominion" RUN_TARGET_NAME="unittest2">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="unittest3" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="dominion" TARGET_NAME="unittest3" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="dominion" RUN_TARGET_NAME="unittest3">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="unittest4" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="dominion" TARGET_NAME="unittest4" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="dominion" RUN_TARGET_NAME="unittest4">
+      <envs />
+      <method />
+    </configuration>
+    <list size="11">
       <item index="0" class="java.lang.String" itemvalue="Application.Build All" />
       <item index="1" class="java.lang.String" itemvalue="Application.playdom" />
       <item index="2" class="java.lang.String" itemvalue="Application.player" />
+      <item index="3" class="java.lang.String" itemvalue="Application.cardtest1" />
+      <item index="4" class="java.lang.String" itemvalue="Application.cardtest2" />
+      <item index="5" class="java.lang.String" itemvalue="Application.cardtest3" />
+      <item index="6" class="java.lang.String" itemvalue="Application.cardtest4" />
+      <item index="7" class="java.lang.String" itemvalue="Application.unittest1" />
+      <item index="8" class="java.lang.String" itemvalue="Application.unittest2" />
+      <item index="9" class="java.lang.String" itemvalue="Application.unittest3" />
+      <item index="10" class="java.lang.String" itemvalue="Application.unittest4" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -419,26 +514,26 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24305555" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24305555" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963988" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42555687" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4548652" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295063" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4259472" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4553806" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -459,11 +554,73 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/cardtest3.c</url>
+          <line>63</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/dominion.c</url>
+          <line>926</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/dominion.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dominion.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="8" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playdom.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asimpleunittest.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/player.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="915">
+          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dominion.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
@@ -542,16 +699,54 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dominion.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-807">
+        <state relative-caret-position="450">
           <caret line="30" column="8" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/unittest3.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-450">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/unittest4.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cardtest3.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dominion.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-960">
-          <caret line="624" column="17" selection-start-line="624" selection-start-column="17" selection-end-line="624" selection-end-column="17" />
+        <state relative-caret-position="175">
+          <caret line="1203" column="0" selection-start-line="1203" selection-start-column="0" selection-end-line="1203" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/unittestbugs.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
           <folding />
         </state>
       </provider>
