@@ -1,0 +1,6 @@
+First I poked around at the functions listed in dominion.c.
+I identified some functions which had clear intent and wrote out test cases for them.
+I came up with what outputs/mutations should take place given some particular inputs.
+Some functions appeared to be so buggy that there was no determining what their intent really was. I stayed away from those.
+As far as cards, I just went with cards whose effects made sense or I remembered from my experience playing Dominion.
+

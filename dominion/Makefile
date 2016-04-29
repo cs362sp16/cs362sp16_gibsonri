@@ -1,4 +1,4 @@
-CFLAGS = -Wall -g -fpic -coverage -lm
+CFLAGS = -Wall -std=c99 -g -fpic -coverage -lm
 CC = gcc
 
 rngs.o: rngs.h rngs.c
@@ -18,8 +18,45 @@ player: player.c interface.o
 
 all: playdom player
 
+unittest1: dominion.o rngs.o
+	$(CC) -o unittest1 unittest1.c dominion.o rngs.o $(CFLAGS)
+
+unittest2: dominion.o rngs.o
+	$(CC) -o unittest2 unittest2.c dominion.o rngs.o $(CFLAGS)
+
+unittest3: dominion.o rngs.o
+	$(CC) -o unittest3 unittest3.c dominion.o rngs.o $(CFLAGS)
+
+unittest4: dominion.o rngs.o
+	$(CC) -o unittest4 unittest4.c dominion.o rngs.o $(CFLAGS)
+
+cardtest1: dominion.o rngs.o
+	$(CC) -o cardtest1 cardtest1.c dominion.o rngs.o $(CFLAGS)
+
+cardtest2: dominion.o rngs.o
+	$(CC) -o cardtest2 cardtest2.c dominion.o rngs.o $(CFLAGS)
+
+cardtest3: dominion.o rngs.o
+	$(CC) -o cardtest3 cardtest3.c dominion.o rngs.o $(CFLAGS)
+
+cardtest4: dominion.o rngs.o
+	$(CC) -o cardtest4 cardtest4.c dominion.o rngs.o $(CFLAGS)
+
+unittestresults.out: unittest1 unittest2 unittest3 unittest4
+unittestresults.out: cardtest1 cardtest2 cardtest3 cardtest4
+	unittest1 >> unittestresults.out
+	unittest2 >> unittestresults.out
+	unittest3 >> unittestresults.out
+	unittest4 >> unittestresults.out
+	cardtest1 >> unittestresults.out
+	cardtest2 >> unittestresults.out
+	cardtest3 >> unittestresults.out
+	cardtest4 >> unittestresults.out
+	gcov dominion.c >> unittestresults.out
+
+
 mac: CC = gcc-5
 mac: playdom player
 
 clean:
-	rm -f *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so *.a *.dSYM
+	rm -f *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so *.a *.dSYM unittestresults.out

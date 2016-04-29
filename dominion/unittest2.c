@@ -4,7 +4,7 @@
 
 int failed = 0;
 
-int myassert(int b, char* msg)
+void myassert(int b, char* msg)
 {
     if (b == 0)
     {
