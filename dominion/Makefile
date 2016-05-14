@@ -42,6 +42,12 @@ cardtest3: dominion.o rngs.o
 cardtest4: dominion.o rngs.o
 	$(CC) -o cardtest4 cardtest4.c dominion.o rngs.o $(CFLAGS)
 
+randomtestadventurer: dominion.o rngs.o
+	$(CC) -o randomtestadventurer randomtestadventurer.c dominion.o rngs.o $(CFLAGS)
+
+randomtestcard1: dominion.o rngs.o
+	$(CC) -o randomtestcard1 randomtestcard1.c dominion.o rngs.o $(CFLAGS)
+
 unittestresults.out: unittest1 unittest2 unittest3 unittest4
 unittestresults.out: cardtest1 cardtest2 cardtest3 cardtest4
 	unittest1 >> unittestresults.out
