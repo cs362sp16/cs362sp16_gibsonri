@@ -13,3 +13,9 @@ do
 	./randomtestcard1 $((RANDOM))
 done
 
+echo "Testing salvager card..."
+make randomtestcard2
+for i in `seq 1 1000`;
+do
+	./randomtestcard2 $((RANDOM))
+done

@@ -48,6 +48,9 @@ randomtestadventurer: dominion.o rngs.o
 randomtestcard1: dominion.o rngs.o
 	$(CC) -o randomtestcard1 randomtestcard1.c dominion.o rngs.o $(CFLAGS)
 
+randomtestcard2: dominion.o rngs.o
+	$(CC) -o randomtestcard2 randomtestcard2.c dominion.o rngs.o $(CFLAGS)
+
 unittestresults.out: unittest1 unittest2 unittest3 unittest4
 unittestresults.out: cardtest1 cardtest2 cardtest3 cardtest4
 	unittest1 >> unittestresults.out
@@ -60,6 +63,17 @@ unittestresults.out: cardtest1 cardtest2 cardtest3 cardtest4
 	cardtest4 >> unittestresults.out
 	gcov dominion.c >> unittestresults.out
 
+randomtestcard1.out: randomtestcard1
+	./randomtestcard1 42 | grep "FAILED" >> randomtestcard1.out
+	-gcov dominion.c >> randomtestcard1.out
+
+randomtestcard2.out: randomtestcard2
+	./randomtestcard2 42 | grep "FAILED" >> randomtestcard2.out
+	-gcov dominion.c >> randomtestcard2.out
+
+randomtestadventurer.out: randomtestadventurer
+	./randomtestadventurer 42 | grep "FAILED" >> randomtestadventurer.out
+	-gcov dominion.c >> randomtestadventurer.out
 
 mac: CC = gcc-5
 mac: playdom player

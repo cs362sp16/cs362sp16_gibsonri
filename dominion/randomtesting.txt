@@ -1,0 +1,32 @@
+My coverage with my random testers is about the same as my unit tests, maybe a little less.
+This is not surprising as the cards I picked didn't have that many additional branches
+that could be exercised by varying the input. The unit tests were wider, but shallower than the random tests,
+because I had unit tests for a wider variety of cards and functions.
+
+My random testers were developed by making a function that produces a random, but sane, game state (e.g. hand count will be a number between 0 and MAX_HAND).
+Various random inputs are generated as needed depending on which card is being tested.
+By inspecting the dominion wiki and the code I determined what kinds of changes should always happen to the game state after a card effect,
+and I wrote asserts that make sure those changes have happened.
+
+I was able to reason about cause and effect a little by changing the code in trivial ways and observing that the random tester caught the problems.
+Most of all, I had to come up with strategies, like printing the particular random seed that was associated with the problem, so I could
+scrutinize those inputs that gave more difficulty. It was actually really useful to be able to reproduce random tester behavior by using the seed.
+In the end, though, I mostly was using these tools in order to debug my random tester as opposed to debugging dominion.
+
+I wrote a shell script to run each random tester 1000 times. It takes 15 seconds or so to execute.
+
+$ gcov dominion.c
+File 'dominion.c'
+Lines executed:0.00% of 646
+dominion.c:creating 'dominion.c.gcov'
+
+$ ./randomtester.sh | grep "FAILED" | wc -l
+       3
+
+$ gcov dominion.c
+File 'dominion.c'
+Lines executed:19.97% of 646
+dominion.c:creating 'dominion.c.gcov'
+
+My random testing produced slightly less coverage than my unit tests, and were about even in the ability to detect faults.
+By inspecting the .gcov file produced by running gcov, I was able to see that I covered all the lines of all the cards I tested.

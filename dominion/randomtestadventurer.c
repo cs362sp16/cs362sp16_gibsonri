@@ -9,6 +9,7 @@
 #include "dominion_helpers.h"
 #include "rngs.h"
 #include "testutils.c"
+#define min(x,y) (((x) < (y)) ? (x) : (y))
 
 
 int isTreasure(enum CARD c) {
@@ -26,20 +27,38 @@ int countTreasure(struct gameState *state) {
     return treasureCount;
 }
 
+int countDeckDiscardTreasure(struct gameState *state) {
+    int currentPlayer = state->whoseTurn;
+    int treasureCount = 0;
+    for (int i = 0; i < state->deckCount[currentPlayer]; i++) {
+        if (isTreasure(state->deck[currentPlayer][i])) {
+            treasureCount++;
+        }
+    }
+    for (int i = 0; i < state->discardCount[currentPlayer]; i++) {
+        if (isTreasure(state->discard[currentPlayer][i])) {
+            treasureCount++;
+        }
+    }
+    return treasureCount;
+}
+
 int main(int argc, char **argv) {
     long randomSeed = getRandomSeed(argc, argv);
     struct gameState state = makeGameState(randomSeed);
     state.deck[state.whoseTurn][0] = adventurer;
 
     int beforeTreasureCount = countTreasure(&state);
+    int expectedDifference = min(2, countDeckDiscardTreasure(&state));
     cardEffect(adventurer, -1, -1, -1, &state, 0, NULL);
     int afterTreasureCount = countTreasure(&state);
 
     char message[128];
-    sprintf(message, "Treasure count should have gone from %d to %d, but instead was %d.\n",
-            beforeTreasureCount, beforeTreasureCount + 2, afterTreasureCount);
+    sprintf(message, "SEED %ld - Treasure count should have gone from %d to %d, but instead was %d.\n",
+            randomSeed, beforeTreasureCount, beforeTreasureCount + expectedDifference, afterTreasureCount);
     int treasureDifference = afterTreasureCount - beforeTreasureCount;
-    myassert(treasureDifference == 2, message);
+
+    myassert(treasureDifference == expectedDifference, message);
 
     checkasserts();
 
