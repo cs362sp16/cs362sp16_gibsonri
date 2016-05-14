@@ -64,15 +64,15 @@ unittestresults.out: cardtest1 cardtest2 cardtest3 cardtest4
 	gcov dominion.c >> unittestresults.out
 
 randomtestcard1.out: randomtestcard1
-	./randomtestcard1 42 | grep "FAILED" >> randomtestcard1.out
+	./randomtestcard1 42 >> randomtestcard1.out
 	-gcov dominion.c >> randomtestcard1.out
 
 randomtestcard2.out: randomtestcard2
-	./randomtestcard2 42 | grep "FAILED" >> randomtestcard2.out
+	./randomtestcard2 42 >> randomtestcard2.out
 	-gcov dominion.c >> randomtestcard2.out
 
 randomtestadventurer.out: randomtestadventurer
-	./randomtestadventurer 42 | grep "FAILED" >> randomtestadventurer.out
+	./randomtestadventurer 42 >> randomtestadventurer.out
 	-gcov dominion.c >> randomtestadventurer.out
 
 mac: CC = gcc-5
