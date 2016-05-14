@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.5)
 project(dominion)
 
 set(CMAKE_C_COMPILER /usr/local/bin/gcc-5)
-set(CMAKE_C_FLAGS "-fprofile-arcs -ftest-coverage -g")
+set(CMAKE_C_FLAGS "-fprofile-arcs -Wall -ftest-coverage -g")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
 
 set(SOURCE_FILES playdom.c dominion.c interface.c rngs.c)
@@ -16,3 +16,4 @@ add_executable(cardtest1 cardtest1.c dominion.c interface.c rngs.c)
 add_executable(cardtest2 cardtest2.c dominion.c interface.c rngs.c)
 add_executable(cardtest3 cardtest3.c dominion.c interface.c rngs.c)
 add_executable(cardtest4 cardtest4.c dominion.c interface.c rngs.c)
+add_executable(randomtestadventurer randomtestadventurer.c dominion.c interface.c rngs.c)
