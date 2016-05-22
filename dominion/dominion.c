@@ -46,24 +46,24 @@ int initializeGame(int numPlayers, int kingdomCards[10], int randomSeed,
   
   //check number of players
   if (numPlayers > MAX_PLAYERS || numPlayers < 2)
-    {
-      return -1;
-    }
+  {
+    return -1;
+  }
 
   //set number of players
   state->numPlayers = numPlayers;
 
-  //check selected kingdom cards are different
+  //check there are no duplicate kingdom cards
   for (i = 0; i < 10; i++)
+  {
+    for (j = 0; j < 10; j++)
     {
-      for (j = 0; j < 10; j++)
-        {
-	  if (j != i && kingdomCards[j] == kingdomCards[i])
-	    {
-	      return -1;
-	    }
-        }
+      if (j != i && kingdomCards[j] == kingdomCards[i])
+      {
+        return -1;
+      }
     }
+  }
 
 
   //initialize supply
