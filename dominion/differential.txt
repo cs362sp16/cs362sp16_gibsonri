@@ -1,0 +1,20 @@
+diffdominion found a difference in my friend's dominion with the seed 1.
+It is hard to read the diff output, so it's hard to tell who was right.
+It's not an ideal case for differential testing because neither of our dominions are known good.
+
+Coverage for my dominion:
+File 'dominion.c'
+Lines executed:67.96% of 646
+dominion.c:creating 'dominion.c.gcov'
+
+Coverage for my friend's dominion:
+File './cards.c'
+Lines executed:52.94% of 68
+./cards.c:creating 'cards.c.gcov'
+
+File 'dominion.c'
+Lines executed:71.26% of 581
+dominion.c:creating 'dominion.c.gcov'
+
+This averages out to about 60% coverage. This wasn't too hard to get.
+It was just necessary to print scores at the end of the game to get enough coverage.
