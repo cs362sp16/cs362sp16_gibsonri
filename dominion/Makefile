@@ -85,7 +85,8 @@ gtestdominion.out: testdominion
 	-gcov dominion.c >> testdominion.out
 
 testdominion.out: testdominion
-	-timeout 5 ./testdominion 42 >> testdominion.out
+    rm -f testdominion.out
+	-timeout 5 ./testdominion 42 > testdominion.out
 	-gcov dominion.c >> testdominion.out
 
 mac: CC = gcc-5
