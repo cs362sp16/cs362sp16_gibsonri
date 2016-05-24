@@ -1,3 +1,4 @@
+SHELL = /bin/bash
 CFLAGS = -Wall -std=c99 -g -fpic -coverage -lm
 CC = gcc
 
@@ -79,8 +80,12 @@ randomtestadventurer.out: randomtestadventurer
 testdominion: testdominion.c dominion.o rngs.o interface.o
 	$(CC) -o testdominion testdominion.c dominion.o rngs.o interface.o $(CFLAGS)
 
+gtestdominion.out: testdominion
+	-gtimeout 5 ./testdominion 42 >> testdominion.out
+	-gcov dominion.c >> testdominion.out
+
 testdominion.out: testdominion
-	./testdominion 42 >> testdominion.out
+	-timeout 5 ./testdominion 42 >> testdominion.out
 	-gcov dominion.c >> testdominion.out
 
 mac: CC = gcc-5

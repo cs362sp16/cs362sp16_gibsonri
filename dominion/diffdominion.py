@@ -12,8 +12,8 @@ def diff_dominion(ref_path, test_path, random_seed):
     ref_out = open(".ref_out", "w")
     test_out = open(".test_out", "w")
 
-    subprocess.call([ref_path + "/testdominion", random_seed], stdout=ref_out)
-    subprocess.call([test_path + "/testdominion", random_seed], stdout=test_out)
+    subprocess.call(["gtimeout", "5", "./testdominion", random_seed], cwd=ref_path, stdout=ref_out)
+    subprocess.call(["gtimeout", "5", "./testdominion", random_seed], cwd=test_path, stdout=test_out)
 
     ref_out.close()
     test_out.close()
@@ -28,7 +28,9 @@ def diff_dominion(ref_path, test_path, random_seed):
         print("TEST PASSED")
     else:
         print("TEST FAILED")
-        print(diff)
+        lines = diff.split("\n")
+        print("Line count of diff:", len(lines))
+        print("\n".join(lines[0:10]))
 
 
 if __name__ == "__main__":

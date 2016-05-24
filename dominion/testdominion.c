@@ -83,14 +83,31 @@ int playRandomCard(struct gameState *g) {
 
 void doPlayerActionPhase(struct gameState *g) {
     bool success = true;
-    while (success && g->numActions != 0 && containsActionCard(g->hand[g->whoseTurn], g->handCount[g->whoseTurn])) {
+    while (success && g->numActions > 0 && containsActionCard(g->hand[g->whoseTurn], g->handCount[g->whoseTurn])) {
         success = playRandomCard(g) == -1 ? false : true;
     }
 }
 
-int buyRandomCard(struct gameState *g) {
-    if (g->coins == 0 || g->numBuys == 0) {
-        return -1;
+bool canBuyCard(struct gameState *g) {
+    if (g->numBuys == 0) {
+        return false;
+    }
+
+    for (int i = 0; i < treasure_map + 1; i++) {
+        // Is this card available to buy and we have enough coins?
+        if (g->supplyCount[i] != 0 && getCost(i) <= g->coins) {
+            return true;
+        }
+    }
+    return false;
+}
+
+/**
+ * Returns a value indicating whether the card was bought.
+ */
+bool buyRandomCard(struct gameState *g) {
+    if (!canBuyCard(g)) {
+        return false;
     }
 
     // get a card which we can afford, is not a curse, and is in the supply
@@ -99,14 +116,13 @@ int buyRandomCard(struct gameState *g) {
         card = randomCard();
     }
     printf("Buying card %d\n", card);
-    buyCard(card, g);
-    return 0;
+    return buyCard(card, g) == 0;
 }
 
 void doPlayerBuyPhase(struct gameState *g) {
     updateCoins(g->whoseTurn, g, 0);
-    while (g->coins > 0 && g->numBuys > 0) {
-        buyRandomCard(g);
+    while (canBuyCard(g)) {
+        if (!buyRandomCard(g)) break;
     }
 }
 
