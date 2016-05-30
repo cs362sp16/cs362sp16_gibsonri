@@ -30,7 +30,8 @@ def diff_dominion(ref_path, test_path, random_seed):
         print("TEST FAILED")
         lines = diff.split("\n")
         print("Line count of diff:", len(lines))
-        print("\n".join(lines[0:10]))
+        print("Showing first 50 lines of diff:")
+        print("\n".join(lines[0:50]))
 
 
 if __name__ == "__main__":
