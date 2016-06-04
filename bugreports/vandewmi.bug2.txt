@@ -1,0 +1,5 @@
+Title: Sea hag doesn't give other players a curse
+Description: The sea hag should put a curse at the top of other players' hands when played, but it doesn't currently.
+Repro steps: Run cardtest3.
+Priority: Medium
+Severity: High

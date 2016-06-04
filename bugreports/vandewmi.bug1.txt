@@ -1,0 +1,5 @@
+Title: Score miscounted
+Description: Under certain circumstances, the score that was manually counted by inspecting a player's cards differs from the score produced by the scoreFor function.
+Steps for repro: Run unittest2.
+Priority: Moderate
+Severity: High (miscounting score is a big deal!)

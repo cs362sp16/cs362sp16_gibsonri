@@ -1,0 +1,5 @@
+Title: Treasure map doesn't add to player's cards
+Description: Playing the treasure map while 2 treasure maps are in the player's hand doesn't result in cards being added to the player's deck, and it also doesn't result in the treasure maps being added to the player's discard pile.
+Repro steps: Run cardtest4.
+Priority: Medium
+Severity: High
