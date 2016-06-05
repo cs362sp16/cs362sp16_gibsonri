@@ -17,5 +17,7 @@ echo "Testing salvager card..."
 make randomtestcard2
 for i in `seq 1 1000`;
 do
-	./randomtestcard2 $((RANDOM))
+	r=$((RANDOM))
+	echo ${r}
+	./randomtestcard2 ${r}
 done
