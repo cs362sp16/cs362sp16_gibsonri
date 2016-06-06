@@ -1,0 +1,13 @@
+\documentclass[11pt]{article}
+
+\begin{document}
+\Large CS 362 Dominion Test Report
+
+\normalsize Rikki Gibson
+
+\bigskip
+The choice to write this program in C forces programmers to manage a lot of difficult little things that are easy to get wrong and very easily go unnoticed. The program is defined with a somewhat small and limited notion of the interface that will be used to play it. There are lots of parallel arrays or lookup table style solutions for things, such as an enum for all the cards in the game, and then accessor functions that take an int and produce some attribute associated with that card, such as its price. The program is not designed by thinking first of how the problem domain can be best expressed but rather by thinking of how to easily deliver a C representation. One unfortunate manifestation of this is the choice to pass around values named "choice1", "choice2", "choice3" rather than come up with some data types that represent a player playing a particular card, that are not necessarily the same between each card.
+
+My small suite of 8 tests covers about 20\% of the core dominion.c file. 
+
+\end{document}

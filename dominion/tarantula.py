@@ -3,16 +3,20 @@
 import subprocess
 import os
 
-# what will I do?
-# -- run a random test (not a differential test)
-# -- record which lines are covered
-# -- after running many tests, finally come out with a score for each line
-# -- put out a "tarantula coverage" file with the code and the score for each line
+
+def tarantula(test_program_names):
+    coverages = [get_coverage(prog_name) for prog_name in test_program_names]
+    susp_list = suspicousness(coverages)
+    print_tarantula(susp_list)
 
 
-def tarantula():
-    coverages = [get_coverage(i) for i in range(8720, 8740)]
-    return suspicousness(coverages)
+def print_tarantula(line_susp_list):
+    dom_file = open("dominion.c", "r")
+    dom_lines = dom_file.readlines()
+    for (dom_line, susp_val) in zip(dom_lines, line_susp_list):
+        print "--  " if susp_val is None else "%.2f" % susp_val,
+        print dom_line,
+    dom_file.close()
 
 
 def suspicousness(coverages):
@@ -40,18 +44,20 @@ def line_suspiciousness(line_no, coverages, total_passed, total_failed):
             else:
                 num_failed += 1
 
-    numerator = num_failed // total_failed if total_failed != 0 else 0
+    numerator = float(num_failed) / total_failed if total_failed != 0 else 0
     denominator = (
-        num_passed // total_passed if total_passed != 0 else 0 +
-        (num_failed // total_failed if total_failed != 0 else 0)
+        float(num_passed) / total_passed if total_passed != 0 else 0 +
+        (float(num_failed) / total_failed if total_failed != 0 else 0)
     )
-    return numerator // denominator if denominator != 0 else 0
+    return numerator / denominator if denominator != 0 else 0
 
 devnull = open(os.devnull, "w")
-def get_coverage(random_seed):
+
+
+def get_coverage(prog_name):
     subprocess.call(["make", "clean"], stdout=devnull, stderr=devnull)
-    subprocess.call(["make", "randomtestcard2"], stdout=devnull, stderr=devnull)
-    test_output = subprocess.check_output(["./randomtestcard2", str(random_seed)])
+    subprocess.call(["make", prog_name], stdout=devnull, stderr=devnull)
+    test_output = subprocess.check_output(["./" + prog_name])
     succeeded = not "FAILED" in test_output
     subprocess.call(["gcov", "dominion.c"], stdout=devnull, stderr=devnull)
     fi = open("dominion.c.gcov", "r")
@@ -77,4 +83,5 @@ def get_line_coverage(line):
 
 
 if __name__ == "__main__":
-    tarantula()
+    tarantula(["unittest1", "unittest2", "unittest3", "unittest4",
+               "cardtest1", "cardtest2", "cardtest3", "cardtest4"])
