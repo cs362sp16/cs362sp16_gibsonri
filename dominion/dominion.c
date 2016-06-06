@@ -407,9 +407,6 @@ int scoreFor(int player, struct gameState *state) {
     if (state->hand[player][i] == great_hall) {
       score = score + 1;
     };
-    if (state->hand[player][i] == gardens) {
-      score = score + (fullDeckCount(player, 0, state) / 10);
-    };
   }
 
   // score from discard
@@ -428,9 +425,6 @@ int scoreFor(int player, struct gameState *state) {
     };
     if (state->discard[player][i] == great_hall) {
       score = score + 1;
-    };
-    if (state->discard[player][i] == gardens) {
-      score = score + (fullDeckCount(player, 0, state) / 10);
     };
   }
 
@@ -452,7 +446,7 @@ int scoreFor(int player, struct gameState *state) {
       score = score + 1;
     };
     if (state->deck[player][i] == gardens) {
-      score = score + (fullDeckCount(player, 0, state) / 10);
+      score = score + (state->deckCount[player] / 10);
     };
   }
 
