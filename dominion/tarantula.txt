@@ -1,0 +1,20 @@
+I went at the tarantula tester using python. I repeat a process like the following:
+
+1. make clean
+2. make sometest
+3. ./sometest
+4. gcov dominion.c | parsegcov
+
+I accumulate the parsed gcov lists and then apply the tarantula formula to find the suspiciousness of each line.
+In the end, I was running my tarantula tester against my unit tests 1-4 and card tests 1-5.
+Really, there were just a few failing tests out of these, so there wound up being a lot of overlap
+between lines that happened to get covered in my tests and lines that showed with high suspiciousness.
+
+Tarantula did a decent job of localizing a bug I was having related to calculating score.
+It showed a lot of the lines in scoreFor as suspicious, except for lines dealing with
+curses and stuff that weren't being exercised in my test case. It did a decent job of localizing the
+fault, but only marginally better than gcov, probably due to the circumstances.
+The bug was in fact that scoreFor is enumerating one of the player's lists of cards using the wrong count.
+The deck was being enumerated using the discardCount instead of the deckCount.
+
+You can try my tarantula tester yourself if you please-- you just have to say ./tarantula.py | less.

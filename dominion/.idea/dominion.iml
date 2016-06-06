@@ -11,19 +11,19 @@
       <sourceFolder url="file://$MODULE_DIR$/rngs.c" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/dominion.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/dominion.c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/playdom.c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/interface.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/cardtest1.c" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/randomtestadventurer.c" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/cardtest3.c" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/cardtest4.c" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/playdom.c" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/interface.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cardtest5.c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dominion.c" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/cardtest2.c" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/randomtestcard1.c" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/randomtestcard2.c" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/testdominion.c" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 2.7.9 (/Library/Frameworks/Python.framework/Versions/2.7/bin/python2.7)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
       <library name="Header Search Paths">
@@ -78,9 +78,9 @@
           <root url="file:///System/Library/Frameworks/vmnet.framework/Headers" />
           <root url="file:///System/Library/Frameworks/CoreMedia.framework/Headers" />
           <root url="file:///System/Library/Frameworks/GSS.framework/Headers" />
+          <root url="file:///System/Library/Frameworks/SystemConfiguration.framework/Headers" />
           <root url="file:///System/Library/Frameworks/Tcl.framework/Headers" />
           <root url="file:///System/Library/Frameworks/Tcl.framework/PrivateHeaders" />
-          <root url="file:///System/Library/Frameworks/SystemConfiguration.framework/Headers" />
           <root url="file:///System/Library/Frameworks/CoreAudioKit.framework/Headers" />
           <root url="file:///System/Library/Frameworks/Cocoa.framework/Headers" />
           <root url="file:///System/Library/Frameworks/OpenCL.framework/Headers" />
@@ -267,9 +267,9 @@
           <root url="file:///System/Library/Frameworks/vmnet.framework/Headers" />
           <root url="file:///System/Library/Frameworks/CoreMedia.framework/Headers" />
           <root url="file:///System/Library/Frameworks/GSS.framework/Headers" />
+          <root url="file:///System/Library/Frameworks/SystemConfiguration.framework/Headers" />
           <root url="file:///System/Library/Frameworks/Tcl.framework/Headers" />
           <root url="file:///System/Library/Frameworks/Tcl.framework/PrivateHeaders" />
-          <root url="file:///System/Library/Frameworks/SystemConfiguration.framework/Headers" />
           <root url="file:///System/Library/Frameworks/CoreAudioKit.framework/Headers" />
           <root url="file:///System/Library/Frameworks/Cocoa.framework/Headers" />
           <root url="file:///System/Library/Frameworks/OpenCL.framework/Headers" />
@@ -433,9 +433,8 @@
           <root url="file:///System/Library/Frameworks/vmnet.framework" />
           <root url="file:///System/Library/Frameworks/CoreMedia.framework" />
           <root url="file:///System/Library/Frameworks/GSS.framework" />
-          <root url="file:///System/Library/Frameworks/DrawSprocket.framework" />
-          <root url="file:///System/Library/Frameworks/Tcl.framework" />
           <root url="file:///System/Library/Frameworks/SystemConfiguration.framework" />
+          <root url="file:///System/Library/Frameworks/Tcl.framework" />
           <root url="file:///System/Library/Frameworks/CoreAudioKit.framework" />
           <root url="file:///System/Library/Frameworks/Cocoa.framework" />
           <root url="file:///System/Library/Frameworks/OpenCL.framework" />
@@ -494,6 +493,7 @@
           <root url="file:///System/Library/Frameworks/CoreText.framework" />
           <root url="file:///System/Library/Frameworks/NetworkExtension.framework" />
           <root url="file:///System/Library/Frameworks/SceneKit.framework" />
+          <root url="file:///System/Library/Frameworks/DrawSprocket.framework" />
           <root url="file:///System/Library/Frameworks/SecurityFoundation.framework" />
           <root url="file:///System/Library/Frameworks/PhotosUI.framework" />
           <root url="file:///System/Library/Frameworks/QuickLook.framework" />
