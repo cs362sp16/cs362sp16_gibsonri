@@ -84,4 +84,4 @@ def get_line_coverage(line):
 
 if __name__ == "__main__":
     tarantula(["unittest1", "unittest2", "unittest3", "unittest4",
-               "cardtest1", "cardtest2", "cardtest3", "cardtest4"])
+               "cardtest1", "cardtest2", "cardtest3", "cardtest4", "cardtest5"])
