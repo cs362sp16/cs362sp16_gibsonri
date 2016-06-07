@@ -2,7 +2,7 @@ I received a bug report informally from a fellow student: "Your gardens card is 
 
 I started by searching for the gardens card online to find the "spec". This is pretty much living up to Agans' rule of "understand the system." Looks like the gardens card is supposed to add 1 to your score for every 10 cards in your deck.
 
-Based on Agans' rule to "make it fail", I wrote a unit test to exercise the gardens card (cardtest5.c). I put 20 nonsense cards in my deck, expecting to get a score of 2. At first I got a score of -18, probably due to curses, but after settings the contents . Why?
+Based on Agans' rule to "make it fail", I wrote a unit test to exercise the gardens card (cardtest5.c). I put 20 nonsense cards in my deck, expecting to get a score of 2. At first I got a score of -18, probably due to curses, but after modifying my test to set the contents to some non-curse values, I got 0. Why?
 
 I checked out the scoreFor function and found that for the gardens card it tries to run the "fullDeckCount" function for the player. Indeed, that function sounds like it gives you the count of the player's deck. I suspected some assumption was being violated, but I didn't know what. I pretty much set a bunch of breakpoints in fullDeckCount as well as in scoreFor (which evokes Agans' rule of "quit thinking and look".)
 
