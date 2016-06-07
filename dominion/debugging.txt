@@ -1,11 +1,26 @@
 I received a bug report informally from a fellow student: "Your gardens card is really broken."
 
-I started by searching for the gardens card online to find the "spec". This is pretty much living up to Agans' rule of "understand the system." Looks like the gardens card is supposed to add 1 to your score for every 10 cards in your deck.
+I started by searching for the gardens card online to find the "spec".
+This is pretty much living up to Agans' rule of "understand the system."
+Looks like the gardens card is supposed to add 1 to your score for every 10 cards in your deck.
 
-Based on Agans' rule to "make it fail", I wrote a unit test to exercise the gardens card (cardtest5.c). I put 20 nonsense cards in my deck, expecting to get a score of 2. At first I got a score of -18, probably due to curses, but after modifying my test to set the contents to some non-curse values, I got 0. Why?
+Based on Agans' rule to "make it fail", I wrote a unit test to exercise the gardens card (cardtest5.c).
+I put 20 nonsense cards in my deck, expecting to get a score of 2. At first I got a score of -18,
+probably due to curses, but after modifying my test to set the contents to some non-curse values,
+I got 0. Why?
 
-I checked out the scoreFor function and found that for the gardens card it tries to run the "fullDeckCount" function for the player. Indeed, that function sounds like it gives you the count of the player's deck. I suspected some assumption was being violated, but I didn't know what. I pretty much set a bunch of breakpoints in fullDeckCount as well as in scoreFor (which evokes Agans' rule of "quit thinking and look".)
+I checked out the scoreFor function and found that for the gardens card it tries to run the "fullDeckCount"
+function for the player. Indeed, that function sounds like it gives you the count
+of the player's deck. I suspected some assumption was being violated, but I didn't know what.
+I pretty much set a bunch of breakpoints in fullDeckCount as well as in scoreFor
+(which evokes Agans' rule of "quit thinking and look".)
 
-As it turns out, fullDeckCount is about finding the number of cards of a particular type held by a particular player. It is not about finding out how many cards are in your deck. Heck, finding that out is really easy, if the game state is valid...it's just state.deckCount[currentPlayer].
+As it turns out, fullDeckCount is about finding the number of cards of a particular type
+held by a particular player. It is not about finding out how many cards are in your deck.
+Heck, finding that out is really easy, if the game state is valid...it's just state.deckCount[currentPlayer].
 
-By examining the spec and using my understanding of dominion, the gardens card should be in the player's deck at the time the score is being counted. Therefore when counting score for deck cards, I'm checking that if the given deck card is gardens, then add 1/10th of the size of the player's deck to their score. This is enough to cause my unit test to pass, but greater scrutiny may be needed in order to ensure that gardens behave as expected during real gameplay.
+By examining the spec and using my understanding of dominion, the gardens card should be in the
+player's deck at the time the score is being counted. Therefore when counting score for deck cards,
+I'm checking that if the given deck card is gardens, then add 1/10th of the size of the
+player's deck to their score. This is enough to cause my unit test to pass, but greater scrutiny
+may be needed in order to ensure that gardens behave as expected during real gameplay.
