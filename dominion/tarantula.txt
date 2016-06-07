@@ -1,4 +1,4 @@
-I went at the tarantula tester using python. I repeat a process like the following:
+I went at the tarantula tester using python. I repeat a process like the following (pseudocode):
 
 1. make clean
 2. make sometest
